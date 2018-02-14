@@ -2,6 +2,7 @@ from astropy.io import fits
 import numpy as np
 import matplotlib.pyplot as plt
 from gatspy import periodic
+import glob
 
 stash = glob.glob('./FITSfiles/*.fits')
 
@@ -29,8 +30,6 @@ fig, ax = plt.subplots(1,2)
 fig.set_size_inches(13,5)
 
 ax[0].plot(data['TIME'][ok], data['FCOR'][ok]);
-#ax[0].set_xlim(2.0,3.6);
-#ax[0].set_ylim(0,700);
 ax[0].set_xlabel("Flux");
 ax[0].set_ylabel("Period(days)");
 
